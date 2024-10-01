@@ -8,7 +8,7 @@ const tryCatchFn = (fn) =>{
             res,
             400,
             error.message,
-            {errors}
+            {error}
          )})
         
         }

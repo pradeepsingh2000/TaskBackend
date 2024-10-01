@@ -2,7 +2,7 @@
 const response = require('../utils/responseUtils')
 
 const validator = (schema,property) => async (req,res,next) =>{
-    const {error}= schema.validate(req[property]|| 'body');
+    const { error } = schema.validate(req[property]); // Remove the fallback to 'body'
     const valid = error == null
     if(valid) {
         next()

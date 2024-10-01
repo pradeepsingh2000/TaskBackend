@@ -7,7 +7,7 @@ const { add, getAll,get, deleted, update } = require('../controllors/task')
 
 
 route.post("/tasks",
-    // validator(Schema.validateTask),
+    validator(Schema.validateTask),
     add
 )
 route.get("/tasks",getAll)
